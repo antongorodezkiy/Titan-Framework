@@ -138,7 +138,7 @@ class TitanFrameworkOptionDate extends TitanFrameworkOption {
 		</script>
 		<?php
 	}
-        
+
         /**
 	 * Return time() for specific date string value
 	 *
@@ -146,10 +146,11 @@ class TitanFrameworkOptionDate extends TitanFrameworkOption {
 	 * @since	1.0
 	 */
 	public function getDateValueInTime() {
-		if ( empty( $this->getValue() ) ) {
+		$value = $this->getValue();
+		if ( empty( $value ) ) {
 			return '';
 		}
-		return strtotime( $this->getValue() );
+		return strtotime( $value );
 	}
 
 
